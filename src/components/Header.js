@@ -5,7 +5,7 @@ const Header = ({ title }) => {
   return (
     <div>
       <h1>{title}</h1>
-    </div>
+    </div >
   )
 }
 
@@ -16,5 +16,11 @@ Header.defaultProps = {
 Header.propTypes = {
   title: propTypes.string.isRequired,
 };
+
+// CSS in JS
+// const headingStyle = {
+//   color: 'red',
+//   backgroundColor: 'black'
+// };
 
 export default Header;
