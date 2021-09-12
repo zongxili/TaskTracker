@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import { useState } from "react";
+import { FaTrashAlt } from "react-icons/fa";
 
 function App() { // root component
 
@@ -33,7 +34,12 @@ function App() { // root component
 
   // Toggle Reminder
   const toggleReminder = (id) => {
-    console.log(id);
+    setTasks(
+      tasks.map((task) =>
+        task.id === id
+          ? { ...task, reminder: !task.reminder }
+          : task
+      ));
   };
 
   return (
