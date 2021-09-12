@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import { useState } from "react";
-import { FaTrashAlt } from "react-icons/fa";
+import AddTask from "./components/AddTask";
 
 function App() { // root component
 
@@ -45,6 +45,7 @@ function App() { // root component
   return (
     <div className="container">
       <Header title='Task Tracker' />
+      <AddTask />
       {tasks.length > 0
         ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
         : ('No Tasks to Show')
