@@ -6,7 +6,7 @@ function App() { // root component
 
   return (
     <div className="container">
-      <Header title='Hello' />
+      <Header title='Task Tracker' />
     </div>
   );
 }
